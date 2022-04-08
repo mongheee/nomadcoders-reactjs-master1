@@ -21,8 +21,13 @@ const Back = styled.button`
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
+  color: rgba(0, 0, 0, 0.8);
+  a:hover {
+    color: ${(props) => props.theme.textColor};
+    transition: all 0.5s ease-in-out;
+  }
   span:first-child {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
   }
   span:last-child {
@@ -95,7 +100,7 @@ const Loader = styled.h1`
 const Container = styled.div`
   padding: 0px 20px;
   max-width: 480px;
-  margin: 0 auto;
+  margin: 20px auto;
 `;
 
 const Header = styled.header`
@@ -107,7 +112,7 @@ const Header = styled.header`
 `;
 
 const Title = styled.h1`
-  font-size: 50px;
+  font-size: 35px;
   font-weight: 700;
   color: ${(props) => props.theme.accentColor};
   width: 33%;
@@ -200,8 +205,8 @@ function Coin() {
       <Header>
         <Back>
           <Link to={`/`}>
-            <span>B</span>
-            <span>ack</span>
+            <span> &larr;</span>
+            <span>Back</span>
           </Link>
         </Back>
         <Title>
